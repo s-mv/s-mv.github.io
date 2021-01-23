@@ -1,4 +1,4 @@
-### Hi there
+# Hi there
 smv here
 ## 🔭 I’m currently working on:  
 I'm working on making stuff to present on GitHub -as I love to show off- and am trying to find fun and challenging ideas.
