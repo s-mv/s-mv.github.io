@@ -14,7 +14,8 @@ JavaScript, I know quite a bit of JavaScript.
 You may check out my GitHub site as of now, even thought it doesn't have a "contact me" option yet :P
 - 😄 Pronouns: ...
 I prefer he/him but you may use _lord/king_.
-- ⚡ Fun fact: ...s
+- ⚡ Fun fact: ...
+A small percentage of the static you see on "dead" tv stations is left over radiation from the Big Bang. You're seeing residual effects of the Universe's creation.
 
 <!--
 **s-mv/s-mv** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
