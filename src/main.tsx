@@ -1,12 +1,16 @@
 import { Component, render } from 'preact'
+// import { Nav } from './nav';
+
+import './css/main.scss';
 
 class App extends Component {
-  constructor(props: any) {
-    super(props);
-  }
+  constructor(props: any) { super(props); }
 
   render = () => {
-    return <>Initial commit!</>;
+    return <div className="main">
+      {/* <Nav /> */}
+      Hello, world!
+    </div>;
   }
 }
 

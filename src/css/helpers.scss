@@ -1,0 +1,21 @@
+// just some helpers I thought would be useful
+
+@mixin scrollbars($size, $fg-color, $bg-color: mix($fg-color, white, 50%)) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $fg-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $bg-color;
+  }
+
+  & {
+    scrollbar-face-color: $fg-color;
+    scrollbar-track-color: $bg-color;
+  }
+}

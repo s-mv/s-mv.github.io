@@ -1,0 +1,13 @@
+$bg: #12263a;
+$underline: #00ff88;
+$highlight: #fff;
+$svg-color: #8f00ff;
+$text: #ffffff;
+
+
+@media (prefers-color-scheme: light) {
+  $bg: #ffffff;
+  $underline: #00ff88;
+  $svg-color: #8f00ff;
+  $text: #ffffff;
+}
