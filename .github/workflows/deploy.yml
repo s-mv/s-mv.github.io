@@ -1,5 +1,8 @@
 name: deploy
 run-name: deploy
+on:
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -21,7 +24,7 @@ jobs:
     name: deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref = 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/download-artifact@v2
         with:
