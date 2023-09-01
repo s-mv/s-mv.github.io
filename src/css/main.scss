@@ -1,6 +1,7 @@
-@use 'global' as global;
+@use 'global' as g;
+@use 'helpers' as h;
 
-:root { 
+:root {
   font-size: 16px;
   border: 0px;
   margin: 0px;
@@ -8,14 +9,26 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   overflow: scroll;
 
   font-size: 1rem;
   font-family: 'Montserrat';
+
+  background: g.$bg;
+  color: g.$text;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 2rem;
+
+  @include h.scrollbars(0.5rem, g.$text, g.$bg);
 }
 
-svg {
-  fill: global.$svg-color;
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
 }

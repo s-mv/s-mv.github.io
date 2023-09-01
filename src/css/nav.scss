@@ -1,0 +1,41 @@
+@use 'global' as g;
+
+.nav {
+  height: 60px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-sec {
+    display: flex;
+    flex-direction: row;
+
+    &.center>.nav-item {
+      margin: 0 1rem;
+    }
+  }
+
+  .nav-item {
+    margin: 0 0.2rem;
+    transition: all 0.1s linear;
+
+    &:hover {
+      color: #000; // TODO this isn't working
+      cursor: pointer;
+    }
+  }
+}
+
+.nav-img {
+  width: 2rem;
+  height: 2rem;
+
+  transition: inherit;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+}

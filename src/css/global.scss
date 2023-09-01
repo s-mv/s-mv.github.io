@@ -1,13 +1,15 @@
 $bg: #12263a;
 $underline: #00ff88;
-$highlight: #fff;
-$svg-color: #8f00ff;
+$highlight: #00ff88;
 $text: #ffffff;
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/font/Montserrat.ttf');
+};
 
 @media (prefers-color-scheme: light) {
   $bg: #ffffff;
   $underline: #00ff88;
-  $svg-color: #8f00ff;
   $text: #ffffff;
 }

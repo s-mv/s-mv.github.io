@@ -1,5 +1,5 @@
 import { Component, render } from 'preact'
-// import { Nav } from './nav';
+import { Nav } from './nav';
 
 import './css/main.scss';
 
@@ -8,8 +8,10 @@ class App extends Component {
 
   render = () => {
     return <div className="main">
-      {/* <Nav /> */}
-      Hello, world!
+      <Nav />
+      <div class="content">
+        Hello, world!
+      </div>
     </div>;
   }
 }
