@@ -4,7 +4,6 @@ import './css/nav.scss';
 
 import linkedin from './assets/linkedin.svg';
 import github from './assets/github.svg';
-import { projects } from "./global";
 
 type URL = {
   [src: string]: string
@@ -22,11 +21,11 @@ export class Nav extends Component {
 
   render = () => {
     return <div class="nav">
-      <section class="right" style={{ fontWeight: "bold" }}>SMV</section>
+      <section class="right logo" style={{ fontWeight: "bold" }}>SMV</section>
       <section class="center">
-        <div className="nav-item" onClick={() => { this.setState({ page: 'home' }) }}>HOME</div>
-        <div className="nav-item" onClick={() => { this.setState({ page: 'projects' }) }}>PROJECTS</div>
-        <div className="nav-item">BLOG</div>
+        <a className="nav-item">HOME</a>
+        <a className="nav-item">PROJECTS</a>
+        <a className="nav-item">BLOG</a>
       </section>
       {/* for links */}
       <section class="left">

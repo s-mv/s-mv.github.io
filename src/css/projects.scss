@@ -1,0 +1,16 @@
+@use 'global' as g;
+
+.proj {
+  section {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.2rem 2rem;
+    border-left: 0.5rem solid g.$dull;
+
+    * {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

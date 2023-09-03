@@ -25,6 +25,10 @@ body {
   @include h.scrollbars(0.5rem, g.$text, g.$bg);
 }
 
+.body {
+  padding: 0 2rem;
+}
+
 h1 {
   font-size: 4rem;
 }
@@ -33,6 +37,35 @@ h2 {
   font-size: 2rem;
 }
 
+h3 {
+  font-size: 1.5rem;
+}
+
 strong {
   color: g.$strong;
+}
+
+aside {
+  color: g.$dull;
+}
+
+a {
+  all: unset;
+  color: g.$strong;
+
+  transition: all 0.2s linear;
+  
+  &:hover {
+    color: g.$link;
+  }
+}
+
+span {
+  display: inline;
+}
+
+@media only screen and (max-width: 800px) {
+  .body {
+    padding: 0 0rem;
+  }
 }
