@@ -1,15 +1,16 @@
-$bg: #12263a;
-$underline: #00ff88;
-$highlight: #00ff88;
-$text: #ffffff;
+$bg: #0f1419;
+$text: #828c99;
+$strong: #00ff88;
 
 @font-face {
   font-family: 'Montserrat';
   src: url('../assets/font/Montserrat.ttf');
-};
+}
 
+// TODO
 @media (prefers-color-scheme: light) {
-  $bg: #ffffff;
-  $underline: #00ff88;
   $text: #ffffff;
+  $bg: #0f1419;
+  $text: #828c99;
+  $strong: #00ff88;
 }
