@@ -4,6 +4,7 @@ import './css/nav.scss';
 
 import linkedin from './assets/linkedin.svg';
 import github from './assets/github.svg';
+import { projects } from "./global";
 
 type URL = {
   [src: string]: string
@@ -15,21 +16,24 @@ const URLs: URL = {
 };
 
 export class Nav extends Component {
-  constructor(props: any) { super(props); }
+  constructor(props: any) {
+    super(props);
+  }
+
   render = () => {
     return <div class="nav">
-      <div class="nav-sec right" style={{ fontWeight: "bold" }}>SMV</div>
-      <div class="nav-sec center">
-        <div className="nav-item">HOME</div>
-        <div className="nav-item">PROJECTS</div>
+      <section class="right" style={{ fontWeight: "bold" }}>SMV</section>
+      <section class="center">
+        <div className="nav-item" onClick={() => { this.setState({ page: 'home' }) }}>HOME</div>
+        <div className="nav-item" onClick={() => { this.setState({ page: 'projects' }) }}>PROJECTS</div>
         <div className="nav-item">BLOG</div>
-      </div>
+      </section>
       {/* for links */}
-      <div class="nav-sec left">
+      <section class="left">
         {Object.keys(URLs).map((key: string) => {
           return <a target="_blank" class="nav-item" href={URLs[key]}><img class="nav-img" src={key} /></a>;
         })}
-      </div>
+      </section>
     </div>;
   }
 }
