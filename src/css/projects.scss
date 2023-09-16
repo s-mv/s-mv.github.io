@@ -1,16 +1,31 @@
 @use 'global' as g;
 
 .proj {
-  section {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+
+  width: 100%;
+
+  .section-container {
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: start;
 
-    padding: 0.2rem 2rem;
-    border-left: 0.5rem solid g.$dull;
+    width: 100%;
 
-    * {
+    section {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+
+      padding: 0.2rem 2rem;
+
+      * {
+        display: flex;
+        flex-direction: row;
+      }
     }
   }
 }

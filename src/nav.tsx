@@ -20,19 +20,21 @@ export class Nav extends Component {
   }
 
   render = () => {
-    return <div class="nav">
-      <section class="right logo" style={{ fontWeight: "bold" }}>SMV</section>
-      <section class="center">
-        <a className="nav-item">HOME</a>
-        <a className="nav-item">PROJECTS</a>
-        <a className="nav-item">BLOG</a>
-      </section>
-      {/* for links */}
-      <section class="left">
-        {Object.keys(URLs).map((key: string) => {
-          return <a target="_blank" class="nav-item" href={URLs[key]}><img class="nav-img" src={key} /></a>;
-        })}
-      </section>
+    return <div class="nav-container">
+      <nav>
+        <section class="right logo" style={{ fontWeight: "bold" }}>SMV</section>
+        <section class="center">
+          <a className="nav-item">HOME</a>
+          <a className="nav-item">PROJECTS</a>
+          <a className="nav-item">BLOG</a>
+        </section>
+        {/* for links */}
+        <section class="left">
+          {Object.keys(URLs).map((key: string) => {
+            return <a target="_blank" class="nav-item" href={URLs[key]}><img class="nav-img" src={key} /></a>;
+          })}
+        </section>
+      </nav>
     </div>;
   }
 }

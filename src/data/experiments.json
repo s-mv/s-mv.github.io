@@ -1,0 +1,27 @@
+[
+  {
+    "WIP": false,
+    "name": "smart fireflies",
+    "desc": "Generic algorithm designed to train entities (fireflies) reach their goal.",
+    "link": "https://codepen.io/s-mv/pen/dyYyWGx"
+  },
+  {
+    "WIP": true,
+    "name": "listmv",
+    "desc": "Dynamic lists and dictionaries with garbage collection in C. Almost finished.",
+    "link": "https://github.com/s-mv/smvcc"
+  },
+  {
+    "WIP": true,
+    "name": "listmv",
+    "desc": "Dynamic lists and dictionaries with garbage collection in C. Almost finished.",
+    "link": "https://github.com/s-mv/smvcc"
+  },
+  {
+    "WIP": false,
+    "name": "game of life",
+    "desc": "",
+    "link": "https://github.com/s-mv/loggr"
+
+  }
+]
