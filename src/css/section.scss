@@ -2,7 +2,7 @@
 
 .section-holder {
   width: 100%;
-  height: calc(100vh - 1.5 * g.$nav-size);
+  min-height: calc(100vh - 1 * g.$nav-size);
 
   display: flex;
   flex-direction: column;
