@@ -1,0 +1,85 @@
+@use 'global' as g;
+@use 'helpers' as h;
+
+:root {
+  font-size: 16px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  overflow: scroll;
+
+  font-size: 1rem;
+  font-family: 'Montserrat';
+
+  background: g.$background;
+  color: g.$text;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.app,
+.main {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.body {
+  overflow-y: scroll;
+
+  scrollbar-color: transparent;
+  // scroll-snap-type: y proximity;
+}
+
+.pushup {
+  height: 1.5 * g.$nav-size;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+strong {
+  color: g.$primary;
+}
+
+aside {
+  color: g.$accent;
+}
+
+a {
+  all: unset;
+  color: g.$primary;
+
+  transition: all 0.2s linear;
+
+  &:hover {
+    color: g.$secondary;
+  }
+}
+
+span {
+  display: inline;
+}
+
+@media only screen and (max-width: 800px) {
+  .body {
+    padding: 0 0rem;
+  }
+}

@@ -8,7 +8,9 @@
   top: 0;
   left: 0;
 
-  background: linear-gradient(g.$bg 50%, transparent 75%);
+  z-index: 42; // this HAS to be on top
+
+  background: linear-gradient(g.$background 25%, transparent 100%);
 }
 
 nav {
@@ -37,7 +39,7 @@ nav {
     transition: all 0.1s linear;
 
     &:hover {
-      color: g.$strong;
+      color: g.$primary;
       cursor: pointer;
     }
   }

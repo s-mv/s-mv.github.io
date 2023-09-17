@@ -1,47 +1,3 @@
-@use 'global' as g;
-@use 'helpers' as h;
-
-:root {
-  font-size: 16px;
-  border: 0px;
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  overflow: scroll;
-
-  font-size: 1rem;
-  font-family: 'Montserrat';
-
-  background: g.$bg;
-  color: g.$text;
-
-  display: flex;
-  flex-direction: column;
-
-  padding: 0 2rem;
-
-  @include h.scrollbars(0.5rem, g.$text, g.$bg);
-}
-
-.body {
-  margin-top: 1.5 * g.$nav-size;
-  padding: 0 2rem;
-}
-
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
 .smv-pic {
   width: 16rem;
   aspect-ratio: 1;
@@ -51,31 +7,9 @@ h3 {
   filter: grayscale(1);
 }
 
-strong {
-  color: g.$strong;
-}
-
-aside {
-  color: g.$dull;
-}
-
-a {
-  all: unset;
-  color: g.$strong;
-
-  transition: all 0.2s linear;
-  
-  &:hover {
-    color: g.$link;
-  }
-}
-
-span {
-  display: inline;
-}
-
-@media only screen and (max-width: 800px) {
-  .body {
-    padding: 0 0rem;
-  }
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
