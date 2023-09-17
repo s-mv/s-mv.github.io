@@ -1,8 +1,8 @@
-$bg: #0f1419;
-$text: #828c99;
-$strong: #00ff88;
-$link: #00fff2;
-$dull: #3d4249;
+$text: #F1F1F1;
+$background: #0F0F0F;
+$primary: #F1F1F1;
+$secondary: #272727;
+$accent: #FF0000;
 
 $nav-size: 5rem;
 
@@ -13,8 +13,9 @@ $nav-size: 5rem;
 
 // TODO
 @media (prefers-color-scheme: light) {
-  $text: #ffffff;
-  $bg: #0f1419;
-  $text: #828c99;
-  $strong: #00ff88;
+  $text: #000000;
+  $background: #FFFFFF;
+  $primary: #FFD814;
+  $secondary: #E3E6E6;
+  $accent: #232F3E;
 }

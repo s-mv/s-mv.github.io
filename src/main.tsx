@@ -24,6 +24,11 @@ class App extends Component {
             Education Society's Institute of Technology (VESIT).<br />
             <br />
             {/* <a>resume</a> */}
+            <span>
+              <a>PROJECTS</a>
+              <a>BLOG</a>
+              <a>CONTACT</a>
+            </span>
           </span>
         </Section>
         <Section>

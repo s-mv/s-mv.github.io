@@ -22,7 +22,7 @@ export class Projects extends Component {
   render = () => {
     return <div class="proj">
       <h2>projects</h2>
-      <div class="section-container">
+      <div class="projects-container">
         {projects.map((v) => {
           return <section>
             <h3>
@@ -39,7 +39,7 @@ export class Projects extends Component {
       </div>
       <h2>more bytes of code</h2>
       The less impressive of my "projects" and experiments.
-      <div class="section-container">
+      <div class="projects-container">
         {experiments.map((v) => {
           return <section>
             <h3>

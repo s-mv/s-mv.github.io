@@ -14,7 +14,7 @@ body {
   font-size: 1rem;
   font-family: 'Montserrat';
 
-  background: g.$bg;
+  background: g.$background;
   color: g.$text;
 
   display: flex;
@@ -22,7 +22,7 @@ body {
 
   padding: 0 2rem;
 
-  @include h.scrollbars(0.5rem, g.$text, g.$bg);
+  @include h.scrollbars(0.5rem, g.$text, g.$background);
 }
 
 .body {
@@ -52,21 +52,21 @@ h3 {
 }
 
 strong {
-  color: g.$strong;
+  color: g.$primary;
 }
 
 aside {
-  color: g.$dull;
+  color: g.$accent;
 }
 
 a {
   all: unset;
-  color: g.$strong;
+  color: g.$primary;
 
   transition: all 0.2s linear;
   
   &:hover {
-    color: g.$link;
+    color: g.$secondary;
   }
 }
 
