@@ -3,6 +3,7 @@ import { Component } from "preact";
 import './css/projects.scss';
 import projectsObj from './data/projects.json';
 import experimentsObj from './data/experiments.json';
+import { Card } from "./card";
 
 type project = {
   WIP: boolean,
@@ -20,11 +21,11 @@ export class Projects extends Component {
   }
 
   render = () => {
-    return <div class="proj">
+    return <div class="projects">
       <h2>projects</h2>
       <div class="projects-container">
         {projects.map((v) => {
-          return <section>
+          return <Card>
             <h3>
               <a target="_blank" href={v.link}>
                 {v.name}{v.WIP ?? <aside>&nbsp;(WIP)</aside>}
@@ -34,14 +35,14 @@ export class Projects extends Component {
             <span>
               link:&nbsp;<a target="_blank" href={v.link}>{v.link}</a>
             </span>
-          </section>;
+          </Card>;
         })}
       </div>
       <h2>more bytes of code</h2>
       The less impressive of my "projects" and experiments.
       <div class="projects-container">
         {experiments.map((v) => {
-          return <section>
+          return <Card>
             <h3>
               <a target="_blank" href={v.link}>
                 {v.name}{v.WIP ?? <aside>&nbsp;(WIP)</aside>}
@@ -51,7 +52,7 @@ export class Projects extends Component {
             <span>
               link:&nbsp;<a target="_blank" href={v.link}>{v.link}</a>
             </span>
-          </section>;
+          </Card>;
         })}
       </div>
     </div>;

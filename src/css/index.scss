@@ -33,13 +33,15 @@ body {
 }
 
 .body {
-  margin-top: 1.5 * g.$nav-size;
-
   height: calc(100vh - 1.5 * g.$nav-size);
   overflow-y: scroll;
 
   scrollbar-color: transparent;
-  scroll-snap-type: y proximity;
+  // scroll-snap-type: y proximity;
+}
+
+.pushup {
+  height: 1.5 * g.$nav-size;
 }
 
 h1 {

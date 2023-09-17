@@ -13,6 +13,7 @@ class App extends Component {
   render = () => {
     return <div class="main">
       {nav}
+      <div id="pushup"></div>
       <div class="body">
         <Section>
           <h1 class="center">Shreerang Vaidya</h1>
