@@ -19,3 +19,9 @@
     scrollbar-track-color: $bg-color;
   }
 }
+
+.row-justified {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
