@@ -83,3 +83,19 @@ span {
     padding: 0 0rem;
   }
 }
+
+.smv-pic {
+  width: 16rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+
+  filter: grayscale(1);
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

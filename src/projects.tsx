@@ -1,4 +1,4 @@
-import { Component, RefObject, createRef } from "preact";
+import { Component } from "preact";
 
 import './css/projects.scss';
 import projectsObj from './data/projects.json';
@@ -16,30 +16,10 @@ const projects: [project] = Object.assign(projectsObj);
 const experiments: [project] = Object.assign(experimentsObj);
 
 export class Projects extends Component {
-  linkshower: RefObject<HTMLAnchorElement>;
-
-  constructor(props: any) {
-    super(props);
-    this.linkshower = createRef();
-  }
-
-
-  onmouse = (inside: boolean) => {
-    if (inside)
-      this.linkshower.current!.classList.add("visible");
-    else
-      this.linkshower.current!.classList.remove("visible");
-  }
-
-  onhover = (link: string, x: number, y: number) => {
-    this.linkshower.current!.style.left = `${x - 32}px`;
-    this.linkshower.current!.style.top = `${y - 32}px`;
-    this.linkshower.current!.href = link;
-  }
+  constructor(props: any) { super(props); }
 
   render = () => {
     return <div class="projects">
-      <a class="linkshower" ref={this.linkshower}>view</a>
       <h2>projects</h2>
       <div class="projects-container">
         {projects.map((v) => {
