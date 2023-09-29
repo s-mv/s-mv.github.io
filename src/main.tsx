@@ -5,7 +5,6 @@ import './css/main.scss';
 import './css/helpers.scss';
 import './css/mini-tailwind.scss';
 import smv from './assets/smv.jpeg'
-import { Section } from './section';
 
 class App extends Component {
   constructor(props: any) { super(props); }
@@ -14,19 +13,17 @@ class App extends Component {
     return <div class="main">
       {nav}
       <div id="pushup"></div>
-      <div class="body">
-        <Section>
-          <h1 class="center">Shreerang Vaidya</h1>
-          <img src={smv} class="smv-pic" /><br />
-          <h3>Full Stack | ML</h3>
-          <span>
-            Student at VESIT.
-          </span>
-        </Section>
-        <Section>
-          {projects}
-        </Section>
-      </div >
+      <div class="section-holder">
+        <h1 class="center">Shreerang Vaidya</h1>
+        <img src={smv} class="smv-pic" /><br />
+        <h3>Full Stack | ML</h3>
+        <span>
+          Student at VESIT.
+        </span>
+      </div>
+      <div className="section-holder">
+        {projects}
+      </div>
       {/* TODO: footer */}
     </div >;
   }

@@ -44,20 +44,14 @@ export class Projects extends Component {
       <div class="projects-container">
         {projects.map((v) => {
           return <Card>
-            <div class="hoverme"
-              onMouseEnter={() => { this.onmouse(true) }}
-              onMouseMove={e => { this.onhover(v.link, e.clientX, e.clientY) }}
-              onMouseLeave={() => { this.onmouse(false) }}
-            >
-              <h3>
-                <a target="_blank" href={v.link}>
-                  {v.name}{v.WIP ?? <aside>&nbsp;(WIP)</aside>}
-                </a>
-              </h3>
-              <span class="desc">
-                {v.desc}
-              </span>
-            </div>
+            <h3>
+              <a target="_blank" href={v.link}>
+                {v.name}{v.WIP ?? <aside>&nbsp;(WIP)</aside>}
+              </a>
+            </h3>
+            <span class="desc">
+              {v.desc}
+            </span>
           </Card>;
         })}
       </div>
@@ -66,20 +60,14 @@ export class Projects extends Component {
       <div class="projects-container">
         {experiments.map((v) => {
           return <Card>
-            <div class="hoverme"
-              onMouseEnter={() => { this.onmouse(true) }}
-              onMouseMove={e => { this.onhover(v.link, e.clientX, e.clientY) }}
-              onMouseLeave={() => { this.onmouse(false) }}
-            >
-              <h3>
-                <a target="_blank" href={v.link}>
-                  {v.name}{v.WIP ?? <aside>&nbsp;(WIP)</aside>}
-                </a>
-              </h3>
-              <span class="desc">
-                {v.desc}
-              </span>
-            </div>
+            <h3>
+              <a target="_blank" href={v.link}>
+                {v.name}{v.WIP ?? <aside>&nbsp;(WIP)</aside>}
+              </a>
+            </h3>
+            <span class="desc">
+              {v.desc}
+            </span>
           </Card>;
         })}
       </div>

@@ -6,6 +6,11 @@ export default defineConfig({
   plugins: [preact()],
   build: {
     rollupOptions: {
+      input: {
+        index: `index.html`,
+        blog: `blog.html`,
+        projects: `projects.html`,
+      },
       output: {
         entryFileNames: `assets/[name].js`,
         chunkFileNames: `assets/[name].js`,
