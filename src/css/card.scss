@@ -1,7 +1,11 @@
 @use 'global.scss' as g;
 
+#pushup {
+  height: g.$nav-size;
+}
+
 .section-holder {
-  width: 100%;
+  width: 100vw;
   min-height: calc(100vh - 1 * g.$nav-size);
 
   display: flex;
