@@ -2,17 +2,7 @@ import { Component } from "preact";
 
 import './css/nav.scss';
 
-import linkedin from './assets/linkedin.svg';
-import github from './assets/github.svg';
-
-type URL = {
-  [src: string]: string
-};
-
-const URLs: URL = {
-  [linkedin]: "https://www.linkedin.com/in/shreerang-vaidya-7aa1a0269/",
-  [github]: "https://github.com/s-mv/",
-};
+import { socials } from "./socials";
 
 export class Nav extends Component {
   constructor(props: any) {
@@ -25,14 +15,20 @@ export class Nav extends Component {
         <section class="right nav-item" style={{ fontWeight: "bold" }}>
           <a href="/blog">BLOG</a>
         </section>
-        <section class="center switch">
-          <a className="nav-item" href="#projects">TECH</a>
-          <a className="nav-item" href="#projects">ME</a>
+        <section class="center switch-container">
+          <label class="switch-body">
+            <input type="checkbox" />
+            <span class="slider"></span>
+            <div class="switch-text">
+              <a class="nav-item">TECH</a>
+              <a class="nav-item">ME</a>
+            </div>
+          </label>
         </section>
         {/* for links */}
         <section class="left">
-          {Object.keys(URLs).map((key: string) => {
-            return <a target="_blank" class="nav-item" href={URLs[key]}><img class="nav-img" src={key} /></a>;
+          {Object.keys(socials).map((key: string) => {
+            return <a target="_blank" class="nav-item" href={socials[key]}><img class="nav-img" src={key} /></a>;
           })}
         </section>
       </nav>

@@ -3,13 +3,14 @@ import { nav, projects } from './global';
 import './css/index.scss';
 import './css/helpers.scss';
 import './css/mini-tailwind.scss';
+
 import smv from './assets/smv.jpeg'
-import down from './assets/down.svg';
+import { socials } from "./socials";
+
 import { Canvas } from './canvas';
 
 class App extends Component {
   constructor(props: any) { super(props); }
-
   render = () => {
     return <>
       <Canvas />
@@ -20,9 +21,12 @@ class App extends Component {
           <h1 class="center">Shreerang Vaidya</h1>
           <img src={smv} class="smv-pic" /><br />
           <h3>Full Stack | ML</h3>
-          <span>
-            Student at VESIT.
-          </span>
+          <h3 class="socials">
+            {Object.keys(socials).map((key: string) => {
+              return <a target="_blank" style={{ margin: ".5rem" }} href={socials[key]}><img class="nav-img" src={key} /></a>;
+            })}
+          </h3>
+          <span>Student at VESIT.</span>
           <div class="scroll-down">
             <span></span>
             <span></span>

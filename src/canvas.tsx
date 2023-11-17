@@ -73,7 +73,6 @@ export class Canvas extends Component {
 
   componentDidMount = () => {
     this.ctx = this.canvas.current!.getContext('2d')!;
-    console.log(this.ctx);
     window.addEventListener('mousemove', (e: { x: number, y: number }) => {
       this.mouse.x = e.x;
       this.mouse.y = e.y;
