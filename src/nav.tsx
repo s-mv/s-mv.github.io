@@ -22,11 +22,12 @@ export class Nav extends Component {
   render = () => {
     return <div class="nav-container">
       <nav>
-        <section class="right logo" style={{ fontWeight: "bold" }}>SMV</section>
-        <section class="center">
-          <a className="nav-item">HOME</a>
-          <a className="nav-item">PROJECTS</a>
-          <a className="nav-item">BLOG</a>
+        <section class="right nav-item" style={{ fontWeight: "bold" }}>
+          <a href="/blog">BLOG</a>
+        </section>
+        <section class="center switch">
+          <a className="nav-item" href="#projects">TECH</a>
+          <a className="nav-item" href="#projects">ME</a>
         </section>
         {/* for links */}
         <section class="left">

@@ -4,6 +4,7 @@ import './css/index.scss';
 import './css/helpers.scss';
 import './css/mini-tailwind.scss';
 import smv from './assets/smv.jpeg'
+import down from './assets/down.svg';
 import { Canvas } from './canvas';
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
   render = () => {
     return <>
       <Canvas />
-      <div class="main">
+      <div class="main" id="main">
         {nav}
         <div id="pushup"></div>
         <div class="section-holder">
@@ -22,6 +23,11 @@ class App extends Component {
           <span>
             Student at VESIT.
           </span>
+          <div class="scroll-down">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
         <div className="section-holder">
           {projects}

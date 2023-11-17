@@ -23,6 +23,8 @@ body {
   border: 0px;
   margin: 0px;
   padding: 0px;
+
+  scroll-behavior: smooth
 }
 
 .app,
@@ -91,6 +93,61 @@ span {
   margin-bottom: 1rem;
 
   filter: grayscale(1);
+}
+
+.scroll-down {
+  margin-top: 2rem;
+
+  span {
+    animation: animate 1.5s infinite;
+    display: block;
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    margin: -.5rem 0;
+    border-bottom: 4px solid mix(g.$secondary, transparent, 50%);
+    border-right: 4px solid mix(g.$secondary, transparent, 50%);
+    border-radius: 2px;
+    rotate: 45deg;
+
+    &:first-child {
+      margin: 0 0;
+    }
+
+    &:nth-child(2) {
+      animation-delay: -0.08s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: -0.16s;
+    }
+  }
+
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      translate: 0 -.8rem;
+    }
+
+    25% {
+      opacity: 0.1;
+      translate: 0 -.8rem;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    75% {
+      opacity: 0.1;
+      translate: 0 .8rem;
+    }
+
+    100% {
+      opacity: 0;
+      translate: 0 .8rem;
+    }
+  }
 }
 
 .landing {

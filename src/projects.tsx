@@ -19,7 +19,7 @@ export class Projects extends Component {
   constructor(props: any) { super(props); }
 
   render = () => {
-    return <div class="projects">
+    return <div class="projects" id="projects">
       <h2>projects</h2>
       <div class="projects-container">
         {projects.map((v) => {

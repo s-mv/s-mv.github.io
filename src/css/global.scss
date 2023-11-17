@@ -25,4 +25,9 @@ $nav-size: 5rem;
     grid-template-columns: repeat(1, 1fr) !important;
     margin: 0 4rem;
   }
+
+  nav>.left,
+  nav>.right {
+    visibility: collapse !important;
+  }
 }
