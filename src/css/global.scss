@@ -19,3 +19,10 @@ $nav-size: 5rem;
   $secondary: #E3E6E6;
   $accent: #232F3E;
 }
+
+@media only screen and (max-width: 800px) {
+  .projects-container {
+    grid-template-columns: repeat(1, 1fr) !important;
+    margin: 0 4rem;
+  }
+}
