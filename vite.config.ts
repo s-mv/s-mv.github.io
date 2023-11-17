@@ -8,8 +8,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: `index.html`,
-        blog: `blog.html`,
-        projects: `projects.html`,
       },
       output: {
         entryFileNames: `assets/[name].js`,
