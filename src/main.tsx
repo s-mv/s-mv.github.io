@@ -1,41 +1,26 @@
 import { Component, render } from 'preact'
-import { nav, projects } from './global';
+import { nav, body } from './global';
 import './css/index.scss';
 import './css/helpers.scss';
 import './css/mini-tailwind.scss';
 
-import smv from './assets/smv.jpeg'
-import { socials } from "./socials";
-
 import { Canvas } from './canvas';
+import { Nav } from './nav';
+import { Body } from './body';
 
-class App extends Component {
+export class App extends Component {
   constructor(props: any) { super(props); }
+  
+  public reload = () => {
+    this.setState({});
+  }
+
   render = () => {
     return <>
       <Canvas />
       <div class="main" id="main">
-        {nav}
-        <div id="pushup"></div>
-        <div class="section-holder">
-          <h1 class="center">Shreerang Vaidya</h1>
-          <img src={smv} class="smv-pic" /><br />
-          <h3>Full Stack | ML</h3>
-          <h3 class="socials">
-            {Object.keys(socials).map((key: string) => {
-              return <a target="_blank" style={{ margin: ".5rem" }} href={socials[key]}><img class="nav-img" src={key} /></a>;
-            })}
-          </h3>
-          <span>Student at VESIT.</span>
-          <div class="scroll-down">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div className="section-holder">
-          {projects}
-        </div>
+        <Nav ref={nav} />
+        <Body ref={body} />
         {/* TODO: footer */}
       </div>
     </>;

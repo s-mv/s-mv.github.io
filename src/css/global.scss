@@ -1,7 +1,7 @@
-$text: #F1F1F1;
-$background: #0F0F0F;
+$text: #fff;
+$background: #000;
 $primary: #00ff88;
-$accent: #1a1a1a;
+$accent: #0d1017;
 $secondary: #8800ff;
 
 $nav-size: 5rem;
@@ -11,13 +11,21 @@ $nav-size: 5rem;
   src: url('../assets/font/Montserrat.ttf');
 }
 
-// TODO
+:root.light-theme {
+  color-scheme: light !important;
+  $text: #000 !default;
+  $background: #fff !default;
+  $primary: #ffd814 !default;
+  $secondary: #e3e6e6 !default;
+  $accent: #232f3e !default;
+}
+
 @media (prefers-color-scheme: light) {
-  $text: #000000;
-  $background: #FFFFFF;
-  $primary: #FFD814;
-  $secondary: #E3E6E6;
-  $accent: #232F3E;
+  $text: #000;
+  $background: #fff;
+  $primary: #ffd814;
+  $secondary: #e3e6e6;
+  $accent: #232f3e;
 }
 
 @media only screen and (max-width: 800px) {

@@ -1,6 +1,16 @@
 import { Component, RefObject, createRef } from 'preact';
 import './css/canvas.scss';
 
+let color_scheme: { away: string, near: string } = {
+  away: "#00ff88",
+  near: "#8800ff",
+};
+
+export let set_scheme = (away: string, near: string) => {
+  color_scheme.away = away;
+  color_scheme.near = near;
+}
+
 class Particle {
   x: number;
   y: number;
@@ -41,8 +51,8 @@ class Particle {
     else if (this.y > ctx.canvas.height) this.y = 0;
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
-    if (dist > 100) ctx.fillStyle = `rgba(0, 255, 136, 1)`;
-    else ctx.fillStyle = `rgba(0, 136, 255, 1)`;
+    if (dist > 100) ctx.fillStyle = color_scheme.away;
+    else ctx.fillStyle = color_scheme.near;
     ctx.fill();
 
     this.dx *= 0.99;
