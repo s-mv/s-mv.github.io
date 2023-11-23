@@ -10,31 +10,35 @@
 
   z-index: 42; // this HAS to be on top
 
-  background: linear-gradient(g.$background 25%, transparent 100%);
+  background: linear-gradient(var(--background) 25%, transparent 100%);
 }
 
 nav {
   width: 100%;
-  height: g.$nav-size;
+  height: var(--nav-size);
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-
 
   section {
     display: flex;
     flex-direction: row;
 
     margin: 0 1rem;
+    padding: 1rem;
 
     &.center>.nav-item {
       margin: 0 1rem;
     }
 
     &.center>.current {
-      color: g.$secondary;
+      color: var(--secondary);
+    }
+
+    &:first-child {
+      flex: 1;
+      justify-content: start;
     }
   }
 
@@ -43,7 +47,7 @@ nav {
     transition: all 0.1s linear;
 
     &:hover {
-      color: g.$primary;
+      color: var(--primary);
       cursor: pointer;
     }
   }

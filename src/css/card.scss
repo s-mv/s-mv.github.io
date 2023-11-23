@@ -24,8 +24,8 @@
   justify-content: center;
   align-items: center;
 
-  background: g.$accent;
+  background: var(--accent);
   border-radius: 0.6rem;
 
-  padding: 1rem;
+  padding: 2rem;
 }

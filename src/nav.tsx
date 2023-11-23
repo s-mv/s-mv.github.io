@@ -16,7 +16,10 @@ export class Nav extends Component<{}, { dark: boolean }> {
     super(props);
     this.techRef = createRef();
     this.meRef = createRef();
-    this.state = { dark: true };
+    this.state = { dark: localStorage.getItem("smvPortfolioSiteThemeDark") == "1" };
+    if (!this.state.dark) {
+      document.documentElement.classList.toggle("light-theme");
+    }
   }
 
   switchTechMe = (e: any) => {
@@ -32,6 +35,7 @@ export class Nav extends Component<{}, { dark: boolean }> {
 
   switchTheme = () => {
     document.documentElement.classList.toggle("light-theme");
+    window.localStorage.setItem("smvPortfolioSiteThemeDark", this.state.dark ? "" : "1");
     this.setState({ dark: !this.state.dark });
   }
 

@@ -1,8 +1,10 @@
-$text: #fff;
-$background: #000;
-$primary: #00ff88;
-$accent: #0d1017;
-$secondary: #8800ff;
+:root {
+  --text: #fff;
+  --background: #000;
+  --primary: #00ff88;
+  --accent: #0d1017;
+  --secondary: #8800ff;
+}
 
 $nav-size: 5rem;
 
@@ -13,19 +15,21 @@ $nav-size: 5rem;
 
 :root.light-theme {
   color-scheme: light !important;
-  $text: #000 !default;
-  $background: #fff !default;
-  $primary: #ffd814 !default;
-  $secondary: #e3e6e6 !default;
-  $accent: #232f3e !default;
+  --text: #011627;
+  --background: #fdfffc;
+  --primary: #e71d36;
+  --secondary: #ff9f1c;
+  --accent: #f9dcc4;
 }
 
 @media (prefers-color-scheme: light) {
-  $text: #000;
-  $background: #fff;
-  $primary: #ffd814;
-  $secondary: #e3e6e6;
-  $accent: #232f3e;
+  :root {
+    --text: #000;
+    --background: #fff;
+    --primary: #3f3400;
+    --secondary: #e3e6e6;
+    --accent: #232f3e;
+  }
 }
 
 @media only screen and (max-width: 800px) {
