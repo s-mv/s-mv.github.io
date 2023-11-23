@@ -15,15 +15,9 @@ export class Nav extends Component {
         <section class="right nav-item" style={{ fontWeight: "bold" }}>
           <a href="/blog">BLOG</a>
         </section>
-        <section class="center switch-container">
-          <label class="switch-body">
-            <input type="checkbox" />
-            <span class="slider"></span>
-            <div class="switch-text">
-              <a class="nav-item">TECH</a>
-              <a class="nav-item">ME</a>
-            </div>
-          </label>
+        <section class="center">
+          <a class="nav-item current">TECH</a>
+          <a class="nav-item">ME</a>
         </section>
         {/* for links */}
         <section class="left">
