@@ -105,8 +105,8 @@ span {
     width: 1rem;
     height: 1rem;
     margin: -.5rem 0;
-    border-bottom: 4px solid rgba(var(--secondary), 50%);
-    border-right: 4px solid rgba(var(--secondary), 50%);
+    border-bottom: 4px solid var(--secondary);
+    border-right: 4px solid var(--secondary);
     border-radius: 2px; 
     rotate: 45deg;
 
