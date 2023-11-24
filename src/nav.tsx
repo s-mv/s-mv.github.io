@@ -8,6 +8,7 @@ import { PageType } from "./body";
 
 import sun from './assets/sun.svg';
 import moon from './assets/moon.svg';
+import { Scheme, set_scheme } from "./canvas";
 
 export class Nav extends Component<{}, { light: boolean }> {
   techRef: RefObject<HTMLAnchorElement>;
@@ -19,6 +20,7 @@ export class Nav extends Component<{}, { light: boolean }> {
     this.state = { light: localStorage.getItem("smvPortfolioSiteThemeLight") == "1" };
     if (this.state.light) {
       document.documentElement.classList.toggle("light-theme");
+      set_scheme(Scheme.Light);
     }
   }
 
@@ -36,6 +38,7 @@ export class Nav extends Component<{}, { light: boolean }> {
   switchTheme = () => {
     document.documentElement.classList.toggle("light-theme");
     window.localStorage.setItem("smvPortfolioSiteThemeLight", this.state.light ? "1" : "");
+    set_scheme(this.state.light ? Scheme.Light : Scheme.Dark);
     console.log(localStorage.getItem("smvPortfolioSiteThemeLight"));
     this.setState({ light: !this.state.light });
   }

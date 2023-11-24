@@ -1,14 +1,27 @@
 import { Component, RefObject, createRef } from 'preact';
 import './css/canvas.scss';
 
-let color_scheme: { away: string, near: string } = {
-  away: "#00ff88",
-  near: "#8800ff",
+export enum Scheme {
+  Dark, Light
 };
 
-export let set_scheme = (away: string, near: string) => {
-  color_scheme.away = away;
-  color_scheme.near = near;
+let color_scheme: { [key in Scheme]: { away: string, near: string , line: string}; } = {
+  [Scheme.Dark]: {
+    away: "#00ff88",
+    near: "#8800ff",
+    line: "255, 255, 255",
+  },
+  [Scheme.Light]: {
+    away: "#ff4400",
+    near: "#000000",
+    line: "0, 0, 0",
+  },
+};
+
+let current_scheme = Scheme.Dark;
+
+export let set_scheme = (scheme: Scheme) => {
+  current_scheme = scheme;
 }
 
 class Particle {
@@ -51,8 +64,8 @@ class Particle {
     else if (this.y > ctx.canvas.height) this.y = 0;
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
-    if (dist > 100) ctx.fillStyle = color_scheme.away;
-    else ctx.fillStyle = color_scheme.near;
+    if (dist > 100) ctx.fillStyle = color_scheme[current_scheme].away;
+    else ctx.fillStyle = color_scheme[current_scheme].near;
     ctx.fill();
 
     this.dx *= 0.99;
@@ -110,7 +123,7 @@ export class Canvas extends Component {
         let grad = ((p2.x - p1.x) ** 2 + (p2.y - p1.y) ** 2) / (this.ctx.canvas.width ** 2 + this.ctx.canvas.height ** 2);
         if (grad > 0.01) continue;
         this.ctx.beginPath();
-        this.ctx.strokeStyle = `rgba(255, 255, 255, ${0.05 + grad / 2})`;
+        this.ctx.strokeStyle = `rgba(${color_scheme[current_scheme].line}, ${0.05 + grad / 2})`;
         this.ctx.moveTo(p1.x, p1.y);
         this.ctx.lineTo(p2.x, p2.y)
         this.ctx.stroke();
