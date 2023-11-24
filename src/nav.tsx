@@ -9,15 +9,15 @@ import { PageType } from "./body";
 import sun from './assets/sun.svg';
 import moon from './assets/moon.svg';
 
-export class Nav extends Component<{}, { dark: boolean }> {
+export class Nav extends Component<{}, { light: boolean }> {
   techRef: RefObject<HTMLAnchorElement>;
   meRef: RefObject<HTMLAnchorElement>;
   constructor(props: any) {
     super(props);
     this.techRef = createRef();
     this.meRef = createRef();
-    this.state = { dark: localStorage.getItem("smvPortfolioSiteThemeDark") == "1" };
-    if (!this.state.dark) {
+    this.state = { light: localStorage.getItem("smvPortfolioSiteThemeLight") != "1" };
+    if (this.state.light) {
       document.documentElement.classList.toggle("light-theme");
     }
   }
@@ -35,8 +35,9 @@ export class Nav extends Component<{}, { dark: boolean }> {
 
   switchTheme = () => {
     document.documentElement.classList.toggle("light-theme");
-    window.localStorage.setItem("smvPortfolioSiteThemeDark", this.state.dark ? "" : "1");
-    this.setState({ dark: !this.state.dark });
+    window.localStorage.setItem("smvPortfolioSiteThemeLight", this.state.light ? "1" : "");
+    console.log(localStorage.getItem("smvPortfolioSiteThemeLight"));
+    this.setState({ light: !this.state.light });
   }
 
   render = () => {
@@ -48,15 +49,15 @@ export class Nav extends Component<{}, { dark: boolean }> {
         <section class="center">
           <a class="nav-item current" id="tech" ref={this.techRef} onClick={this.switchTechMe}>TECH</a>
           <a class="nav-item" ref={this.meRef} onClick={this.switchTechMe}>ME</a>
+          <span className="nav-item" onClick={this.switchTheme}>
+            <img class="nav-img" src={this.state.light ? moon : sun}></img>
+          </span>
         </section>
         {/* for links */}
         <section class="left">
           {Object.keys(socials).map((key: string) => {
             return <a target="_blank" class="nav-item" href={socials[key]}><img class="nav-img" src={key} /></a>;
           })}
-          <span className="nav-item" onClick={this.switchTheme}>
-            <img class="nav-img" src={this.state.dark ? sun : moon}></img>
-          </span>
         </section>
       </nav>
     </div>;
