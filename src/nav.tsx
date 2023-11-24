@@ -16,7 +16,7 @@ export class Nav extends Component<{}, { light: boolean }> {
     super(props);
     this.techRef = createRef();
     this.meRef = createRef();
-    this.state = { light: localStorage.getItem("smvPortfolioSiteThemeLight") != "1" };
+    this.state = { light: localStorage.getItem("smvPortfolioSiteThemeLight") == "1" };
     if (this.state.light) {
       document.documentElement.classList.toggle("light-theme");
     }
