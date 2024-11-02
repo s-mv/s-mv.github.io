@@ -5,18 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "preact": "^10.16.0"
+    "preact": "^10.24.3"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.5.0",
-    "@types/three": "^0.156.0",
-    "sass": "^1.66.1",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "@preact/preset-vite": "^2.9.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.10"
   }
 }

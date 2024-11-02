@@ -1,8 +1,0 @@
-[
-  {
-    "WIP": true,
-    "name": "smvcc",
-    "desc": "A C compiler written in C. Lots TODO.",
-    "link": "https://github.com/s-mv/smvcc"
-  }
-]
