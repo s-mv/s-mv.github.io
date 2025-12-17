@@ -1,18 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>smv</title>
-  <script type="module" crossorigin src="/assets/index.js"></script>
-  <link rel="stylesheet" href="/assets/index.css">
-</head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              terminal: {
+                bg: '#1a1b26', 
+                fg: '#c0caf5',
+                fg_bright: '#F3F4F5',
+                border: '#414868',
+                black: '#15161E',
+                red: '#f7768e',
+                green: '#9ece6a',
+                yellow: '#e0af68',
+                blue: '#7aa2f7',
+                magenta: '#bb9af7',
+                cyan: '#7dcfff',
+                white: '#c0caf5',
+              },
+              retro: {
+                bg: '#0000AA',
+                fg: '#FFFFFF',
+                accent: '#FFFF55',
+                border: '#FFFFFF',
+                menu: '#AAAAAA',
+                highlight: '#00AAAA',
+              }
+            },
+            fontFamily: {
+              mono: ['Courier New', 'Courier', 'monospace'],
+              sans: ['PxPlus IBM VGA8', 'Courier New', 'monospace'],
+            },
+            boxShadow: {
+              'retro': '4px 4px 0px 0px rgba(0,0,0,0.5)',
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
 
-<body>
-  <div id="app"></div>
-  
-</body>
+    <style>
+      .scrollbar-terminal::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+      }
+      .scrollbar-terminal::-webkit-scrollbar-track {
+        background: rgba(26, 27, 38, 0.5);
+      }
+      .scrollbar-terminal::-webkit-scrollbar-thumb {
+        background: #414868;
+        border-radius: 4px;
+      }
+      .scrollbar-terminal::-webkit-scrollbar-thumb:hover {
+        background: #565f89;
+      }
 
+      .scrollbar-thin::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+      .scrollbar-thin::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .scrollbar-thin::-webkit-scrollbar-thumb {
+        background: rgba(128,128,128,0.5);
+        border-radius: 2px;
+      }
+      .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+        background: rgba(128,128,128,0.8);
+      }
+
+      .scrollbar-retro::-webkit-scrollbar {
+        height: 12px;
+        width: 12px;
+      }
+      .scrollbar-retro::-webkit-scrollbar-track {
+        background: #0000AA;
+        image-rendering: pixelated;
+        background-image: radial-gradient(#FFFFFF 15%, transparent 16%);
+        background-size: 4px 4px;
+      }
+      .scrollbar-retro::-webkit-scrollbar-thumb {
+        background-color: #00AAAA;
+        border: 1px solid #FFFFFF;
+      }
+      
+      .scanlines {
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,0),
+          rgba(255,255,255,0) 50%,
+          rgba(0,0,0,0.2) 50%,
+          rgba(0,0,0,0.2)
+        );
+        background-size: 100% 4px;
+        pointer-events: none;
+      }
+
+      .bg-terminal-image {
+        background-image: url('/bg.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .bg-retro-image {
+        background-image: url('/bliss.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+    </style>
+
+
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+          "react/": "https://aistudiocdn.com/react@^19.2.0/"
+        }
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-rhTYoco7.js"></script>
+  </head>
+
+  <body class="min-h-screen">
+    <div id="root"></div>
+  </body>
 </html>
+
