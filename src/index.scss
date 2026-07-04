@@ -1,0 +1,175 @@
+:root {
+  font-size: 16px;
+}
+
+body[data-theme="dark"] {
+  --text: #ffffff;
+  --muted: #c3cad6;
+  --border: #6b7280;
+  --overlay: rgba(11, 14, 20, 0.85);
+  --card: rgba(28, 32, 45, 0.5);
+}
+
+body[data-theme="light"] {
+  --text: #111827;
+  --muted: #374151;
+  --border: #9ca3af;
+  --overlay: rgba(245, 247, 250, 0.8);
+  --card: rgba(255, 255, 255, 0.6);
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #0b0e14;
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+kbd {
+  padding: 0.1rem 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  font-size: 0.85em;
+}
+
+.resume-route-bg {
+  min-height: 100vh;
+  background: #fff;
+  color: #000;
+  padding: 1rem;
+}
+
+.resume-plain {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 0 0.25rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 8.8pt;
+  line-height: 1.08;
+}
+
+.resume-header-plain {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.resume-header-plain h1 {
+  font-size: 16pt;
+  margin: 0 0 0.25rem;
+}
+
+.resume-header-plain p {
+  margin: 0.1rem 0;
+  font-size: 8pt;
+}
+
+.resume-plain a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.resume-plain h2 {
+  border-bottom: 1px solid #111;
+  font-size: 10.5pt;
+  margin: 0.35rem 0 0.12rem;
+}
+
+.resume-plain p {
+  margin: 0.1rem 0;
+}
+
+.resume-plain ul {
+  margin: 0.05rem 0 0.15rem;
+  padding-left: 0.95rem;
+}
+
+.resume-right-plain {
+  float: right;
+}
+
+.resume-section-title {
+  border-bottom: 1px solid #111;
+  font-size: 10.5pt;
+  font-weight: 700;
+  margin: 0.35rem 0 0.12rem;
+}
+
+.resume-list {
+  list-style: disc;
+  margin: 0.05rem 0 0.15rem;
+  padding-left: 0.95rem;
+}
+
+.resume-entry {
+  break-inside: avoid;
+  margin-bottom: 0.2rem;
+}
+
+@media (max-width: 900px) {
+  .resume-plain {
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 8mm;
+  }
+
+  html,
+  body,
+  #app {
+    height: auto;
+    background: #fff !important;
+  }
+
+  html {
+    background: #fff !important;
+  }
+
+  body {
+    color: #000 !important;
+    margin: 0 !important;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .resume-route-bg {
+    background: #fff;
+    padding: 0;
+    min-height: auto;
+  }
+
+  .resume-plain {
+    margin: 0;
+    max-width: none;
+    padding: 0.75mm 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .resume-section-title {
+    margin-top: 2.5mm;
+  }
+
+  .resume-list {
+    margin-bottom: 1mm;
+  }
+}
