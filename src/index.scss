@@ -1,12 +1,12 @@
 :root {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body[data-theme="dark"] {
   --text: #ffffff;
   --muted: #c3cad6;
   --border: #6b7280;
-  --overlay: rgba(11, 14, 20, 0.85);
+  --overlay: rgba(11, 14, 20, 0.875);
   --card: rgba(28, 32, 45, 0.5);
 }
 
@@ -14,7 +14,7 @@ body[data-theme="light"] {
   --text: #111827;
   --muted: #374151;
   --border: #9ca3af;
-  --overlay: rgba(245, 247, 250, 0.8);
+  --overlay: rgba(245, 247, 250, 0.825);
   --card: rgba(255, 255, 255, 0.6);
 }
 
@@ -44,7 +44,7 @@ kbd {
   padding: 0.1rem 0.35rem;
   border: 1px solid var(--border);
   border-radius: 0.25rem;
-  font-size: 0.85em;
+  font-size: 0.9rem;
 }
 
 .resume-route-bg {

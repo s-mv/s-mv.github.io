@@ -7,11 +7,11 @@ import Faq from "./faq.jsx";
 const FAQ_ITEMS = [
   {
     question: "What is this site for?",
-    answer: "A small personal corner for projects, notes, and experiments.",
+    answer: "It's my site! So that people know that I exist.",
   },
   {
-    question: "What stack is this built with?",
-    answer: "Preact + Vite with a very lightweight layout.",
+    question: "Do you work at google?",
+    answer: "Not this again...",
   },
 ];
 
@@ -123,9 +123,8 @@ export default function Layout({
 
           {isAbout && (
             <Section title="About">
-              <p class="mb-3">hey, i'm smv.</p>
-              <p class="mb-3">i like building things, learning systems, and writing from time to time.</p>
-              <p>this site is intentionally simple and fast.</p>
+              <p class="text-xl font-bold mb-3">hey, I'm smv.</p>
+              <p class="mb-3">I'm a student of computer science trying to understand more about systems, compilers and all things tech. I also love watching cringe movies with smug disdain. I'm between degrees right now. Hopefully I remember to update this later.</p>
             </Section>
           )}
 

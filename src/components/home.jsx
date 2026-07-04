@@ -18,10 +18,10 @@ export default function Home() {
       </p>
 
       <div>
-        <p class="mb-1">Link:</p>
+        <p class="mb-1">Links:</p>
         <ul class="list-disc pl-6">
           <li>
-            github: <a href="https://github.com/s-mv" target="_blank" rel="noreferrer">https://github.com/s-mv</a>
+            github: <a href="https://github.com/s-mv" target="_blank" rel="noreferrer">github.com/s-mv</a>
           </li>
           <li>
             blog: <a href="https://s-mv.github.io/blog" target="_blank" rel="noreferrer">s-mv.github.io/blog</a>
