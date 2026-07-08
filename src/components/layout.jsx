@@ -10,6 +10,10 @@ const FAQ_ITEMS = [
     answer: "It's my site! So that people know that I exist.",
   },
   {
+    question: "Please replace vite's default favicon for this site!",
+    answer: "That's not a question!",
+  },
+  {
     question: "Do you work at google?",
     answer: "Not this again...",
   },
