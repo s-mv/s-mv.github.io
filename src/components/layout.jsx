@@ -15,7 +15,14 @@ const FAQ_ITEMS = [
   },
   {
     question: "Do you work at google?",
-    answer: "Not this again...",
+    answer: <div
+      className="inline underline">
+      <a
+        href="https://s-mv.github.io/blog/2026/05/09/life-at-google.html"
+        target="_blank">
+        Not this again...
+      </a>
+    </div>,
   },
 ];
 
@@ -85,9 +92,9 @@ export default function Layout({
                 About
               </NavLink>
 
-              <NavLink href="/resume" currentRoute={route} onNavigate={onNavigate}>
+              {/* <NavLink href="/resume" currentRoute={route} onNavigate={onNavigate}>
                 Resume
-              </NavLink>
+              </NavLink> */}
 
               <NavLink href="/faq" currentRoute={route} onNavigate={onNavigate}>
                 FAQ
@@ -128,7 +135,15 @@ export default function Layout({
           {isAbout && (
             <Section title="About">
               <p class="text-xl font-bold mb-3">hey, I'm smv.</p>
-              <p class="mb-3">I'm a student of computer science trying to understand more about systems, compilers and all things tech. I also love watching cringe movies with smug disdain. I'm between degrees right now. Hopefully I remember to update this later.</p>
+              <p class="mb-3">
+                I'm a student of computer science trying to understand more
+                about systems, compilers and all things tech. I like reading,
+                writing, and playing badminton when I can. Currently I am
+                pursuing an MS by Research @ IITB.
+              </p>
+              <p class="mb-3">
+                I also love watching cringe movies with smug disdain.
+              </p>
             </Section>
           )}
 

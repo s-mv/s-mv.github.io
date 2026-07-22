@@ -19,13 +19,21 @@ export default function Home() {
 
       <div>
         <p class="mb-1">Links:</p>
-        <ul class="list-disc pl-6">
-          <li>
-            github: <a href="https://github.com/s-mv" target="_blank" rel="noreferrer">github.com/s-mv</a>
-          </li>
-          <li>
-            blog: <a href="https://s-mv.github.io/blog" target="_blank" rel="noreferrer">s-mv.github.io/blog</a>
-          </li>
+        <ul className="list-disc pl-6">
+          {[
+            { label: "github", url: "github.com/s-mv" },
+            { label: "blog", url: "s-mv.github.io/blog" },
+            { label: "linkedIn", url: "linkedin.com/in/smvdev" },
+          ].map(({ label, url }) => (
+            <li key={url}>
+              {label}:{" "}
+              <div className="inline underline">
+                <a href={`https://${url}`} target="_blank" rel="noreferrer">
+                  {url}
+                </a>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </header>
