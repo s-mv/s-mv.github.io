@@ -6,11 +6,12 @@ import wallpaper2 from "/wallpaper2.jpeg";
 import Layout from "./components/layout.jsx";
 
 function getCurrentRoute() {
-  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+  const path = window.location.hash.slice(1) || "/";
 
   if (
     path === "/about" ||
     path === "/resume" ||
+    path === "/plato" ||
     path === "/faq"
   ) {
     return path;
@@ -71,12 +72,12 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    const onPopState = () => {
+    const onHashChange = () => {
       setRoute(getCurrentRoute());
     };
 
-    window.addEventListener("popstate", onPopState);
-    return () => window.removeEventListener("popstate", onPopState);
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
 
   useEffect(() => {
@@ -84,20 +85,10 @@ export function App() {
     window.localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const handleNavigate = (path) => {
-    if (path === route) {
-      return;
-    }
-
-    window.history.pushState({}, "", path);
-    setRoute(path);
-  };
-
   return (
     <Layout
       wallpaper={wallpaper === 0 ? wallpaper1 : wallpaper2}
       route={route}
-      onNavigate={handleNavigate}
       theme={theme}
       onToggleTheme={toggleTheme}
       onToggleWallpaper={toggleWallpaper}

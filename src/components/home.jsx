@@ -10,7 +10,7 @@ export default function Home() {
       </p>
 
       <p class="mb-2">
-        (compiler dev, tech nerd)
+        (compiler enthusiast, systems enjoyer)
       </p>
 
       <p class="mb-6">
@@ -18,6 +18,24 @@ export default function Home() {
       </p>
 
       <div>
+        <p className="mb-4">Currently part of <div className="inline underline"><a href="https://www.cse.iitb.ac.in/plato/" target="_blank">PLATO</a></div> @ IITB.</p>
+
+
+        <p class="mb-1">Know more:</p>
+        <ul className="list-disc pl-6 mb-6">
+          {[
+            { label: "More about me", url: "/about" },
+            { label: "smv @ PLATO", url: "/plato" },
+          ].map(({ label, url }) => (
+            <li key={url}>
+              <div className="inline underline">
+                <a href={`#${url}`} class="mr-5">{label}</a>
+              </div>
+            </li>
+          ))}
+        </ul>
+
+
         <p class="mb-1">Links:</p>
         <ul className="list-disc pl-6">
           {[
