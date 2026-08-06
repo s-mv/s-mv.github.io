@@ -71,12 +71,12 @@ export default function Layout({
     DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
     SCHEDULE = {
-      Mon: [["09:00", "11:00"], ["14:00", "17:00"]],
-      Tue: [["09:00", "11:00"], ["14:00", "15:00"], ["17:30", "18:30"]],
-      Wed: [["09:00", "10:30"], ["17:30", "18:30"]],
-      Thu: [["09:00", "11:00"], ["17:30", "18:30"]],
-      Fri: [["09:00", "10:30"], ["14:00", "15:00"], ["17:30", "18:30"]],
-      Sat: [["09:00", "11:00"]],
+      Mon: [["09:30", "11:00"], ["14:00", "17:00"]],
+      Tue: [["09:30", "11:00"], ["14:00", "15:30"], ["17:00", "18:00"]],
+      Wed: [["09:30", "11:00"], ["17:00", "18:00"]],
+      Thu: [["09:30", "11:00"], ["17:00", "18:00"]],
+      Fri: [["09:30", "11:00"], ["14:00", "15:30"], ["17:00", "18:00"]],
+      Sat: [["09:30", "11:00"]],
       Sun: [["14:00", "18:00"]],
     };
 
@@ -203,12 +203,14 @@ export default function Layout({
               </p>
               <p class="mb-3">
                 Tentatively I am in the lab in the given time slots.
+                <br />
+                Last updated on: 06/18/2026
               </p>
               <p class="mb-3">
                 <strong>Current status:</strong>{" "}
                 {mightBeInLab
                   ? "🟢 There's a good chance I'm in the lab."
-                  : "⚪ I'm probably not in the lab right now."}
+                  : "🔴 I'm probably not in the lab right now."}
               </p>
 
               <div class="mb-3 overflow-x-auto">
