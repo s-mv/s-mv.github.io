@@ -18,8 +18,9 @@ export default function Home() {
       </p>
 
       <div>
-        <p className="mb-4">Currently part of <div className="inline underline"><a href="https://www.cse.iitb.ac.in/plato/" target="_blank">PLATO</a></div> @ IITB.</p>
-
+        <p className="mb-4">Currently part of <span className="inline underline">
+          <a href="https://www.cse.iitb.ac.in/plato/" target="_blank">
+            PLATO</a></span> @ IITB.</p>
 
         <p class="mb-1">Know more:</p>
         <ul className="list-disc pl-6 mb-6">
