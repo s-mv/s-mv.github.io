@@ -247,6 +247,8 @@ export default function Layout({
 
               <p class="mb-3">
                 Tentatively I am in the lab in the given time slots.
+                <br />
+                Last updated on: 06/18/2026
               </p>
 
               <p class="mb-3">
@@ -265,7 +267,7 @@ export default function Layout({
                     ? "There's a good chance I'm in the lab."
                     : "I'm probably not in the lab right now."}
                 </span>
-              </p>
+              </p >
 
               <div class="mb-3 overflow-x-auto">
                 <table
@@ -408,14 +410,15 @@ export default function Layout({
                   probably not
                 </span>
               </div>
-            </Section>
-          )}
+            </Section >
+          )
+          }
 
           {isFaq && <Faq items={FAQ_ITEMS} />}
 
           <Footer />
-        </main>
-      </div>
-    </div>
+        </main >
+      </div >
+    </div >
   );
 }
