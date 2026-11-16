@@ -12,7 +12,8 @@ function getCurrentRoute() {
     path === "/about" ||
     path === "/resume" ||
     path === "/plato" ||
-    path === "/faq"
+    path === "/faq" ||
+    path === "/meow"
   ) {
     return path;
   }

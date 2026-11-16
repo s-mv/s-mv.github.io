@@ -3,6 +3,7 @@ import Footer from "./footer.jsx";
 import Home from "./home.jsx";
 import Resume from "./resume.jsx";
 import Faq from "./faq.jsx";
+import RabbitHoles from "./rabbit-holes.jsx";
 import { Fragment } from "preact";
 
 const FAQ_ITEMS = [
@@ -58,6 +59,7 @@ export default function Layout({
   const isResume = route === "/resume";
   const isPlato = route === "/plato";
   const isFaq = route === "/faq";
+  const isRabbitHoles = route === "/meow";
 
   if (isResume) {
     return (
@@ -74,11 +76,26 @@ export default function Layout({
     DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
     SCHEDULE = {
-      Mon: [["09:00", "11:30"], ["14:00", "17:00"]],
-      Tue: [["09:00", "11:30"], ["17:30", "19:00"]],
-      Wed: [["09:00", "11:00"], ["17:00", "19:00"]],
-      Thu: [["09:00", "11:00"], ["17:00", "19:00"]],
-      Fri: [["09:00", "11:00"], ["17:00", "19:00"]],
+      Mon: [
+        ["09:00", "11:30"],
+        ["14:00", "17:00"],
+      ],
+      Tue: [
+        ["09:00", "11:30"],
+        ["17:30", "19:00"],
+      ],
+      Wed: [
+        ["09:00", "11:00"],
+        ["17:00", "19:00"],
+      ],
+      Thu: [
+        ["09:00", "11:00"],
+        ["17:00", "19:00"],
+      ],
+      Fri: [
+        ["09:00", "11:00"],
+        ["17:00", "19:00"],
+      ],
       Sat: [["15:00", "18:00"]],
       Sun: [["15:00", "18:00"]],
     };
@@ -93,7 +110,7 @@ export default function Layout({
 
       return {
         label: `${String(Math.floor(mins / 60)).padStart(2, "0")}:${String(
-          mins % 60
+          mins % 60,
         ).padStart(2, "0")}`,
         minutes: mins,
       };
@@ -130,8 +147,7 @@ export default function Layout({
 
     mightBeInLab = SCHEDULE[today].some(
       ([start, end]) =>
-        hour >= toMinutes(start) / 60 &&
-        hour < toMinutes(end) / 60
+        hour >= toMinutes(start) / 60 && hour < toMinutes(end) / 60,
     );
   }
 
@@ -179,6 +195,10 @@ export default function Layout({
 
               <NavLink href="/faq" currentRoute={route}>
                 FAQ
+              </NavLink>
+
+              <NavLink href="/meow" currentRoute={route}>
+                Rabbit Holes
               </NavLink>
             </nav>
 
@@ -241,8 +261,8 @@ export default function Layout({
 
               <p class="mb-3">
                 I'm currently working on a small part of CoS-SSA (particularly
-                the implementation of the data dependence graph) as well as
-                SLIM IR at PLATO.
+                the implementation of the data dependence graph) as well as SLIM
+                IR at PLATO.
               </p>
 
               <p class="mb-3">
@@ -267,7 +287,7 @@ export default function Layout({
                     ? "There's a good chance I'm in the lab."
                     : "I'm probably not in the lab right now."}
                 </span>
-              </p >
+              </p>
 
               <div class="mb-3 overflow-x-auto">
                 <table
@@ -410,15 +430,15 @@ export default function Layout({
                   probably not
                 </span>
               </div>
-            </Section >
-          )
-          }
+            </Section>
+          )}
 
           {isFaq && <Faq items={FAQ_ITEMS} />}
 
+          {isRabbitHoles && <RabbitHoles />}
           <Footer />
-        </main >
-      </div >
-    </div >
+        </main>
+      </div>
+    </div>
   );
 }
